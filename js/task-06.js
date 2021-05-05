@@ -6,13 +6,21 @@
 Для добавления стилей, используй CSS-классы valid и invalid.
 
 */
-const input = document.getElementById("validation-input");
-const valInput = document.getElementById('#validation - input.valid');
-const invalInput = document.getElementById('#validation - input.invalid');
+const inputRef = document.getElementById("validation-input");
+const dataLength = inputRef.getAttribute('data-length');
 
-if (input.querySelector.(data - length) <= input) {
-    return valInput;
+inputRef.addEventListener('input', valParams)
+
+function valParams(e) {
+
+    if (+dataLength === this.value.length) {
+        updateClass('valid', 'invalid');
+    } else {
+        updateClass('invalid', 'valid');
+    }
 }
-else {
-    return invalInput;
+
+function updateClass(add, remove) {
+    inputRef.classList.remove(remove);
+    inputRef.classList.add(add);
 }

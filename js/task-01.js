@@ -15,9 +15,9 @@
 
 const categorysRefs = document.querySelector("#categories");
 const listRefs = categorysRefs.querySelectorAll(".item");
-console.log(listRefs.length);
+
 
 listRefs.forEach((item) => {
-  console.log(item.querySelector("h2").textContent);
-  console.log(item.querySelectorAll("li").length);
+    item.querySelector("h2").textContent;
+    item.querySelectorAll("li").length;
 });
